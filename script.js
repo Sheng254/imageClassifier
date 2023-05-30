@@ -34,3 +34,13 @@ async function classifyImage() {
         predictionDisplay.appendChild(prediction);
       });
     }
+
+    img.src = e.target.result;
+  }
+
+  reader.readAsDataURL(file);
+}
+
+// Handle image upload
+const imageUpload = document.getElementById('image-upload');
+imageUpload.addEventListener('change', classifyImage);
